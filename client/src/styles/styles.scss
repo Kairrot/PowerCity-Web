@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css');
+@import '../../node_modules/animate.css/animate.min.css';
+@import './global.scss';
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #222222;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 800;
+  display: block;
+}
+
+/* Nav */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  background: linear-gradient(to left, #FA9905, #FB3640);
+}
+
+.navigation .right .connect_btn {
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 12px;
+
+  & span::before { margin-left: 5px; }
+}
+
+.navigation .connect {
+  background: #131313;
+  position: absolute;
+  padding: 30px;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1s;
+  z-index: 1000;
+
+  & .connectUser {
+    background: #FA9905;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  & .register_button {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+
+
+/* Home */
+.home .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px
+}
+
+.home .info .launcher {
+  & .icons {
+    font-size: 45px;
+
+    & .mdi-minecraft { color: #FA9905; }
+    & .mdi-sword { color: #FB3640; }
+    & .sword-left::before { transform: scaleX(-1); }
+  }
+
+  & .ip {
+    color: #FA9905;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+.home .info .banner {
+  & img {
+    width: 25vw;
+  }
+}
+
+.home .info .discord {
+  & .icons {
+    font-size: 45px;
+
+    & .mdi-discord { color: #7289DA; }
+  }
+
+  & .discord {
+    color: #7289DA;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+.home .bottom {
+  padding: 20px;
+  background: #131313;
+}
+
+
+/* Register */
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.register .content {
+  background: linear-gradient(to right, #FB3640, #FA9905);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.register .content .input-label p {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  position: absolute;
+  top: -3px;
+  right: 0;
+}
