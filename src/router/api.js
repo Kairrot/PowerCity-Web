@@ -77,10 +77,10 @@ router.post('/user', async (req,res) => {
     res.status(200).json({status: 200})
 });
 
-router.get('/confirm', (req,res) => {
+router.get('/confirm', async (req,res) => {
     if(!req.query.verify) return res.status(400).json({status: 400, message: 'NOT_VERIFY'});
 
-    const user = global.db.findOne("user", {verify: req.query.verify});
+    const user = await global.db.findOne("user", {verify: req.query.verify});
     if(user.active) return res.redirect(process.env.HOST);
 
     if(!user) return res.status(400).json({status: 400, message: 'KEY_NOT_CORRECT'});
