@@ -8,8 +8,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(express.static(path.join(__dirname, '../public')))
 app.use(express.static(path.join(__dirname, '../client/dist')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.use(require('./router'))
 
